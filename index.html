@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polish Clean - Estética Automotiva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #002B5B;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1605559424843-3c1b3eaf2bb3') no-repeat center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero .buttons {
+      margin-top: 20px;
+    }
+
+    .hero .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-yellow {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+    .btn-blue {
+      background-color: #002B5B;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services {
+      background-color: #002B5B;
+      color: white;
+    }
+
+    .services h3 {
+      color: #FFD700;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .services ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .services li {
+      font-size: 1.1rem;
+    }
+
+    .portfolio {
+      background-color: #FFD700;
+    }
+
+    .portfolio h3 {
+      color: #002B5B;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .portfolio-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #002B5B;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Polish Clean</h1>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Estética Automotiva Profissional</h2>
+    <p>Polimento, higienização e cuidado de verdade para seu carro</p>
+    <div class="buttons">
+      <a href="#portfolio" class="btn-yellow">Ver Portfólio</a>
+      <a href="https://wa.me/5511978017263" class="btn-blue">Fale conosco</a>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="services" id="servicos">
+    <h3>Nossos Serviços</h3>
+    <ul>
+      <li>✅ Polimento automotivo</li>
+      <li>✅ Higienização de estofados e couro</li>
+      <li>✅ Limpeza detalhada do painel</li>
+      <li>✅ Higienização de colchões e sofás</li>
+    </ul>
+  </section>
+
+  <!-- Portfólio -->
+  <section class="portfolio" id="portfolio">
+    <h3>Portfólio</h3>
+    <div class="portfolio-grid">
+      <img src="https://iili.io/FOVFPun.jpg" alt="Trabalho 1">
+      <img src="https://iili.io/FOVqvGj.png" alt="Trabalho 2">
+      <img src="https://iili.io/FOVqV3l.png" alt="Trabalho 3">
+      <img src="https://iili.io/FOVB1N1.png" alt="Trabalho 4">
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer id="contato">
+    <p>&copy; 2025 Polish Clean - Todos os direitos reservados.</p>
+    <p><a href="https://www.instagram.com/polish.clean" style="color:#FFD700;">@polish.clean</a></p>
+  </footer>
+
+</body>
+</html>
