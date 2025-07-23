@@ -5,270 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Polish Clean - Estética Automotiva</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: #fff;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #002B5B;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #FFD700;
-    }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1605559424843-3c1b3eaf2bb3') no-repeat center/cover;
-      color: white;
-      padding: 140px 20px 100px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      animation: fadeInUp 1s ease forwards;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      animation: fadeInUp 1.5s ease forwards;
-    }
-
-    .hero .buttons {
-      margin-top: 20px;
-    }
-
-    .hero .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .btn-yellow {
-      background-color: #FFD700;
-      color: #000;
-    }
-
-    .btn-blue {
-      background-color: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-    }
-
-    .btn-yellow:hover {
-      background-color: #e6c200;
-    }
-
-    .btn-blue:hover {
-      background-color: #003d7a;
-    }
-
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .services {
-      background-color: #002B5B;
-      color: white;
-    }
-
-    .services h3,
-    .portfolio h3,
-    .testimonials h3,
-    .contact h3 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .services h3 {
-      color: #FFD700;
-    }
-
-    .services ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .services li {
-      font-size: 1.1rem;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .services li:hover {
-      transform: translateY(-5px);
-    }
-
-    .portfolio {
-      background-color: #FFD700;
-    }
-
-    .portfolio h3 {
-      color: #002B5B;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .portfolio-grid img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .portfolio-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    .testimonials {
-      background-color: #f4f4f4;
-    }
-
-    .testimonial {
-      max-width: 700px;
-      margin: 0 auto;
-      font-style: italic;
-    }
-
-    .contact {
-      background-color: #002B5B;
-      color: white;
-    }
-
-    .contact form {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .contact input,
-    .contact textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: none;
-    }
-
-    .contact button {
-      padding: 10px 20px;
-      background-color: #FFD700;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: #001f3a;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer a {
-      color: #FFD700;
-      text-decoration: none;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      font-size: 30px;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .whatsapp-float i {
-      line-height: 60px;
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif; scroll-behavior:smooth; }
+    body { background:#fff; color:#111; }
+    header { position:fixed; top:0; width:100%; background:#002B5B; color:#fff; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; z-index:1000; }
+    header h1 { font-size:1.5rem; }
+    nav a { color:#fff; margin-left:20px; text-decoration:none; font-weight:700; transition:color .3s; }
+    nav a:hover { color:#FFD700; }
+    section { padding:120px 20px 80px; text-align:center; }
+    .hero { background:url('https://images.unsplash.com/photo-1605559424843-3c1b3eaf2bb3') no-repeat center/cover; color:#fff; padding-top:160px; }
+    .hero h2 { font-size:2.8rem; margin-bottom:10px; }
+    .hero p { font-size:1.2rem; margin-bottom:20px; }
+    .hero .buttons a { display:inline-block; margin:10px; padding:12px 25px; border-radius:5px; font-weight:bold; text-decoration:none; transition:background .3s;}
+    .btn-yellow { background:#FFD700; color:#000; }
+    .btn-blue { background:transparent; color:#fff; border:2px solid #fff; }
+    .btn-yellow:hover { background:#e6c200; }
+    .btn-blue:hover { background:#003d7a; }
+    /* Serviços */
+    .services { background:#002B5B; color:#fff; }
+    .services h3 { color:#FFD700; margin-bottom:30px; font-size:2rem; }
+    .services ul { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; max-width:900px; margin:0 auto; }
+    .services li { padding:20px; background:rgba(255,255,255,0.1); border-radius:8px; transition:transform .3s; }
+    .services li:hover { transform:translateY(-5px); }
+    .services i { font-size:1.5rem; margin-bottom:10px; }
+    /* Portfólio */
+    .portfolio { background:#FFD700; }
+    .portfolio h3 { color:#002B5B; margin-bottom:30px; font-size:2rem;}
+    .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; max-width:1000px; margin:0 auto; }
+    .portfolio-grid img { width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.2); transition:transform .3s; }
+    .portfolio-grid img:hover { transform:scale(1.05); }
+    /* Instagram feed */
+    .ig-feed { background:#fff; padding:60px 20px; }
+    .ig-feed h3 { font-size:2rem; margin-bottom:30px; color:#002B5B; }
+    .ig-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; max-width:800px; margin:0 auto;}
+    .ig-grid img { width:100%; border-radius:5px; }
+    /* Orçamento */
+    .quote { background:#f4f4f4; padding:60px 20px; }
+    .quote h3 { font-size:2rem; margin-bottom:20px; color:#002B5B; }
+    .quote form { max-width:500px; margin:0 auto; text-align:left; }
+    .quote label { display:block; margin-bottom:5px; margin-top:15px; color:#002B5B; }
+    .quote input, .quote select, .quote textarea { width:100%; padding:10px; border-radius:5px; border:1px solid #ccc; }
+    .quote button { margin-top:20px; padding:12px 20px; background:#25d366; color:#fff; border:none; border-radius:5px; font-weight:bold; cursor:pointer; }
+    /* Beacons */
+    .beacons { background:#fff; padding:60px 20px; text-align:center;}
+    .beacons h3 { font-size:2rem; margin-bottom:15px; color:#002B5B; }
+    .beacons iframe { width:100%; max-width:400px; height:600px; border:none; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.1); }
+    /* Footer */
+    footer { background:#002B5B; color:#fff; text-align:center; padding:30px 20px;}
+    footer a { color:#FFD700; text-decoration:none;}
+    /* WhatsApp */
+    .whatsapp-float { position:fixed; bottom:20px; right:20px; background:#25d366; width:60px; height:60px; border-radius:50%; color:#fff; font-size:30px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(0,0,0,.3); z-index:1000; }
+    .whatsapp-float:hover { background:#20c25c; }
+    /* Responsivo */
+    @media(max-width:600px){
+      header { flex-direction:column; text-align:center; }
+      .hero h2 { font-size:2rem; }
+      .hero p { font-size:1rem; }
+      .beacons iframe{height:500px;}
     }
   </style>
 </head>
@@ -279,19 +73,12 @@
     <nav>
       <a href="#servicos">Serviços</a>
       <a href="#portfolio">Portfólio</a>
-      <a href="#contato">Contato</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#orcamento">Orçamento</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Estética Automotiva Profissional</h2>
-    <p>Polimento, higienização e cuidado de verdade para seu carro</p>
-    <div class="buttons">
-      <a href="#portfolio" class="btn-yellow">Ver Portfólio</a>
-      <a href="https://wa.me/5511978017263" target="_blank" class="btn-yellow" style="margin-top: 20px; display: inline-block;">Chamar no WhatsApp</a>
-    </div>
-  </section>
-
+  
   <section class="services" id="servicos">
     <h3>Nossos Serviços</h3>
     <ul>
@@ -312,15 +99,30 @@
     </div>
   </section>
 
-
-  <section class="contact" id="contato">
-    <h3>Fale Conosco</h3>
-    <form action="https://formsubmit.co/Polish.clean2021@outlook.com" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar mensagem</button>
+  
+  <section class="quote" id="orcamento">
+    <h3>Peça um Orçamento</h3>
+    <form onsubmit="orcar(event)">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <label for="servico">Serviço desejado:</label>
+      <select id="servico" name="servico">
+        <option>Polimento automotivo</option>
+        <option>Higienização de estofados</option>
+        <option>Limpeza do painel</option>
+        <option>Higienização de colchões</option>
+      </select>
+      <label for="carro">Modelo do carro:</label>
+      <input type="text" id="carro" name="carro" required>
+      <label for="data">Data desejada:</label>
+      <input type="date" id="data" name="data">
+      <button type="submit">Enviar via WhatsApp</button>
     </form>
+  </section>
+
+  <section class="beacons">
+    <h3>Mais conteúdos e promoções</h3>
+    <iframe src="https://beacons.ai/polishclean" title="Beacons Polish Clean"></iframe>
   </section>
 
   <footer>
@@ -328,9 +130,21 @@
     <p><a href="https://www.instagram.com/polish.clean">@polish.clean</a></p>
   </footer>
 
-  <a href="https://wa.me/5511978017263" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/5511978017263" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <script>
+    function orcar(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const servico = document.getElementById('servico').value;
+      const carro = document.getElementById('carro').value;
+      const data = document.getElementById('data').value;
+      const msg = `Olá! Gostaria de orçamento para *${servico}* no carro modelo *${carro}*${data ? ' para a data ' + data : ''}. Meu nome é *${nome}*.`;
+      const url = `https://wa.me/5511978017263?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
