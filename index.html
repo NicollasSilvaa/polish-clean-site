@@ -5,32 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Polish Clean - Estética Automotiva</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: #ffffff;
+      background-color: #fff;
       color: #111;
       line-height: 1.6;
     }
 
     header {
+      position: fixed;
+      top: 0;
+      width: 100%;
       background-color: #002B5B;
       color: white;
-      padding: 20px 40px;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      z-index: 100;
     }
 
     header h1 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
 
     nav a {
@@ -38,23 +43,30 @@
       margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FFD700;
     }
 
     .hero {
       background: url('https://images.unsplash.com/photo-1605559424843-3c1b3eaf2bb3') no-repeat center/cover;
       color: white;
-      padding: 100px 20px;
+      padding: 140px 20px 100px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
+      animation: fadeInUp 1s ease forwards;
     }
 
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 20px;
+      animation: fadeInUp 1.5s ease forwards;
     }
 
     .hero .buttons {
@@ -68,6 +80,7 @@
       border-radius: 5px;
       font-weight: bold;
       text-decoration: none;
+      transition: background 0.3s ease;
     }
 
     .btn-yellow {
@@ -76,13 +89,21 @@
     }
 
     .btn-blue {
-      background-color: #002B5B;
+      background-color: transparent;
       color: #fff;
       border: 2px solid #fff;
     }
 
+    .btn-yellow:hover {
+      background-color: #e6c200;
+    }
+
+    .btn-blue:hover {
+      background-color: #003d7a;
+    }
+
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
@@ -91,10 +112,16 @@
       color: white;
     }
 
+    .services h3,
+    .portfolio h3,
+    .testimonials h3,
+    .contact h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
     .services h3 {
       color: #FFD700;
-      margin-bottom: 30px;
-      font-size: 2rem;
     }
 
     .services ul {
@@ -108,6 +135,14 @@
 
     .services li {
       font-size: 1.1rem;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .services li:hover {
+      transform: translateY(-5px);
     }
 
     .portfolio {
@@ -116,8 +151,6 @@
 
     .portfolio h3 {
       color: #002B5B;
-      margin-bottom: 30px;
-      font-size: 2rem;
     }
 
     .portfolio-grid {
@@ -132,13 +165,91 @@
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .testimonials {
+      background-color: #f4f4f4;
+    }
+
+    .testimonial {
+      max-width: 700px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    .contact {
+      background-color: #002B5B;
+      color: white;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .contact button {
+      padding: 10px 20px;
+      background-color: #FFD700;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     footer {
-      background-color: #002B5B;
+      background-color: #001f3a;
       color: white;
       text-align: center;
       padding: 30px 20px;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-float i {
+      line-height: 60px;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     @media (max-width: 600px) {
@@ -150,12 +261,19 @@
       nav {
         margin-top: 10px;
       }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho -->
   <header>
     <h1>Polish Clean</h1>
     <nav>
@@ -165,28 +283,25 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h2>Estética Automotiva Profissional</h2>
     <p>Polimento, higienização e cuidado de verdade para seu carro</p>
     <div class="buttons">
       <a href="#portfolio" class="btn-yellow">Ver Portfólio</a>
-      <a href="https://wa.me/5511978017263" class="btn-blue">Fale conosco</a>
+      <a href="https://wa.me/5511978017263" target="_blank" class="btn-yellow" style="margin-top: 20px; display: inline-block;">Chamar no WhatsApp</a>
     </div>
   </section>
 
-  <!-- Serviços -->
   <section class="services" id="servicos">
     <h3>Nossos Serviços</h3>
     <ul>
-      <li>✅ Polimento automotivo</li>
-      <li>✅ Higienização de estofados e couro</li>
-      <li>✅ Limpeza detalhada do painel</li>
-      <li>✅ Higienização de colchões e sofás</li>
+      <li><i class="fas fa-car"></i> Polimento automotivo</li>
+      <li><i class="fas fa-soap"></i> Higienização de estofados e couro</li>
+      <li><i class="fas fa-spray-can"></i> Limpeza detalhada do painel</li>
+      <li><i class="fas fa-couch"></i> Higienização de colchões e sofás</li>
     </ul>
   </section>
 
-  <!-- Portfólio -->
   <section class="portfolio" id="portfolio">
     <h3>Portfólio</h3>
     <div class="portfolio-grid">
@@ -197,11 +312,25 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer id="contato">
+
+  <section class="contact" id="contato">
+    <h3>Fale Conosco</h3>
+    <form action="https://formsubmit.co/Polish.clean2021@outlook.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar mensagem</button>
+    </form>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Polish Clean - Todos os direitos reservados.</p>
-    <p><a href="https://www.instagram.com/polish.clean" style="color:#FFD700;">@polish.clean</a></p>
+    <p><a href="https://www.instagram.com/polish.clean">@polish.clean</a></p>
   </footer>
+
+  <a href="https://wa.me/5511978017263" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
