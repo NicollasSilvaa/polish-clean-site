@@ -1,4 +1,5 @@
 💼 Projeto: Polish Clean - Estética Automotiva
+
 Este projeto é um site institucional one-page desenvolvido em HTML, CSS e JavaScript puro, voltado para o negócio de estética automotiva Polish Clean. Ele oferece uma apresentação visual moderna, responsiva e funcional, ideal para atrair clientes e divulgar os serviços oferecidos.
 
 🎯 Funcionalidades
