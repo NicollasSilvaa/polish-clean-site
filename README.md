@@ -13,6 +13,13 @@
 - **Arquitetura de Fluxo Duplo:** Caminhos visuais separados de forma inteligente para **Detailing Automotivo** e **Serviços Residenciais (Sofás e Mobílias)**, garantindo uma comunicação de nicho que não confunde o cliente.
 - **Totalmente Responsivo:** Tela desenhada minuciosamente para brilhar desde monitores ultra-wide até smartphones, mantendo a experiência em 100% de estabilidade cinematográfica.
 
+## 🔒 Segurança Estrutural Nível Enterprise
+
+Apesar de ser uma Landing Page, a aplicação conta com proteção rígida no código e servidor contra as vulnerabilidades web mais comuns:
+- **Blindagem contra Tabnabbing:** Todos os links de saída e roteamento externo (WhatsApp, Instagram) utilizando `target="_blank"` estão protegidos com o atributo irrevogável `rel="noreferrer"`.
+- **Cabeçalhos HTTP Estritos (Vercel):** Implementação nativa do arquivo `vercel.json` injetando restrições de conexão avançadas diretas no servidor (`X-Frame-Options: DENY` eliminando tentativas de Clickjacking, `X-XSS-Protection` em modo de bloqueio e `Strict-Transport-Security` / HSTS).
+- **Código Auditado:** Ausência total de injeções irresponsáveis e suscetíveis (`dangerouslySetInnerHTML`) e árvore de plugins de produção auditada contra falhas conhecidas de injeção (`npm audit`).
+
 ## 🛠️ Stack Tecnológico Utilizado
 
 - **Frontend:** [React 19](https://react.dev/)
