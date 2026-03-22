@@ -149,7 +149,7 @@ const Features = () => {
           <p className="text-textMuted text-lg max-w-2xl">A engenharia por trás do nosso detalhamento técnico. Nossos serviços operam em níveis não vistos em estéticas comuns.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {/* Card 1: Diagnostic Shuffler (Correção) */}
           <div className="bg-surface rounded-[2rem] p-8 border border-white/5 relative overflow-hidden group hover:border-white/15 transition-colors">
@@ -157,7 +157,7 @@ const Features = () => {
               <h3 className="font-heading font-bold text-2xl text-white mb-2">Correção de Pintura</h3>
               <p className="text-textMuted text-sm">Remoção de micro-riscos, hologramas e oxidação. Restauração do brilho profundo.</p>
             </div>
-            <div className="relative h-48 w-full flex flex-col justify-end perspective-1000">
+            <div className="relative h-56 w-full flex flex-col justify-end perspective-1000">
               {shufflerData.map((item, index) => {
                 const isSelected = index === 2;
                 return (
@@ -189,7 +189,7 @@ const Features = () => {
               <h3 className="font-heading font-bold text-2xl text-white mb-2">Vitrificação</h3>
               <p className="text-textMuted text-sm">Ceramic Coating com propriedades hidrofóbicas extremas e proteção química.</p>
             </div>
-            <div className="bg-background rounded-xl p-4 border border-white/10 h-48 font-mono text-xs text-accent leading-relaxed relative">
+            <div className="bg-background rounded-xl p-4 border border-white/10 h-56 font-mono text-xs text-accent leading-relaxed relative overflow-hidden">
               <div className="flex items-center gap-2 mb-3 border-b border-white/10 pb-2">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
                 <span className="text-textMuted uppercase tracking-wider text-[10px]">Live Feed</span>
