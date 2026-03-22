@@ -1,20 +1,23 @@
-💼 Projeto: Polish Clean - Estética Automotiva
+Polish Clean | Estética Automotiva
 
-Este projeto é um website desenvolvido em HTML, CSS e JavaScript puro, voltado para o negócio de estética automotiva Polish Clean. Ele oferece uma apresentação visual moderna, responsiva e funcional, ideal para atrair clientes e divulgar os serviços oferecidos.
+Polish Clean é uma landing page cinematográfica de alta performance, desenvolvida para um estúdio de estética automotiva e higienização premium. O projeto apresenta o conceito de design "Midnight Luxe" (Luxo da Meia-Noite), focado em um estilo escuro de estúdio moderno, com micro-animações interativas e um layout totalmente responsivo projetado para converter clientes do segmento automotivo e residencial.
 
-🎯 Funcionalidades
-Layout Responsivo: Compatível com dispositivos móveis e desktops.
+🌟 Principais Diferenciais
+Vídeo Herói Cinematográfico: Vídeo de fundo imersivo (com reprodução automática e mudo) que reflete a essência premium dos tratamentos logo na primeira impressão.
+Animações de Rolagem (GSAP): Implementação avançada do ScrollTrigger para revelações de elementos fluídas, além de um sistema exclusivo de "Sticky Stacking" (Empilhamento Fixo) para exibir as etapas do protocolo de serviço.
 
-Hero Section com chamada para ação e imagem de fundo.
+Micro-interações de Interface:
+Botões que criam uma área magnética sutil acompanhando o mouse.
+"Diagnostic Shuffler" animado para simular análise técnica da pintura.
+"Live Feed Typewriter", simulando painéis de telemetria durante a etapa de vitrificação química.
+Arquitetura de Fluxo Duplo: Caminhos visuais separados de forma inteligente para Detailing Automotivo e Serviços Residenciais (Sofás e Mobílias), garantindo uma comunicação de nicho que não confunde o cliente.
+Totalmente Responsivo: Tela desenhada minuciosamente para brilhar desde monitores ultra-wide até smartphones, mantendo a experiência em 100% de estabilidade cinematográfica.
 
-Serviços com ícones representando os trabalhos oferecidos (polimento, higienização, pintura, etc).
-
-Portfólio com galeria de fotos interativas usando Glide.js (carrossel) e Lightbox2 (ampliação de imagem).
-
-Formulário de orçamento com envio direto via WhatsApp, preenchendo dados do serviço e modelo do carro.
-
-Links rápidos flutuantes para Instagram e WhatsApp.
-
-Animações com AOS.js para transições suaves ao rolar a página.
-
-Estilização moderna com cores preto, amarelo e azul, inspiradas no branding do negócio.
+🛠️ Stack Tecnológico Utilizado
+Frontend: React 19
+Ferramenta de Build: Vite
+Estilização e Layout: Tailwind CSS v3
+Animações e Interação: GSAP (GreenSock Animation Platform) e ScrollTrigger
+Iconografia Clássica: Lucide React
+📝 Licença Restrita
+Estrutura visual desenvolvida exclusivamente sob diretrizes da Polish Clean. Direitos particulares resguardados.
