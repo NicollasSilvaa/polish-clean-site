@@ -364,8 +364,8 @@ const Protocol = () => {
 
       <div className="max-w-4xl mx-auto relative flex flex-col gap-[12vh] pb-8">
         {steps.map((step, i) => (
-          <div key={i} className="protocol-wrapper sticky top-24 w-full h-[80dvh] md:h-[75dvh]" style={{ zIndex: i }}>
-            <div className="protocol-card absolute inset-0 w-full h-full bg-surface/95 backdrop-blur-md border border-white/10 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 flex flex-col justify-between overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.8)] border-t border-l">
+          <div key={i} className="protocol-wrapper sticky top-24 w-full h-[calc(100dvh-7rem)] md:h-[75dvh]" style={{ zIndex: i }}>
+            <div className="protocol-card absolute inset-0 w-full h-full bg-surface/95 backdrop-blur-md border border-white/10 rounded-[2rem] md:rounded-[3rem] p-5 md:p-12 flex flex-col justify-between overflow-y-auto overflow-x-hidden scrollbar-hide shadow-[0_0_80px_rgba(0,0,0,0.8)] border-t border-l">
               {/* Elemento Gráfico de Fundo Abstrato */}
               <div className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -380,15 +380,15 @@ const Protocol = () => {
                 </div>
               </div>
 
-              <div className="max-w-3xl text-left bg-background/60 backdrop-blur-xl p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/10 relative z-10 w-full shadow-2xl">
-                <h3 className="font-heading font-bold text-xl md:text-4xl text-white mb-2 md:mb-4">{step.title}</h3>
-                <p className="font-mono text-[12px] md:text-sm text-textMuted leading-snug md:leading-relaxed mb-4 md:mb-8 border-b border-white/10 pb-4 md:pb-6">{step.desc}</p>
+              <div className="max-w-3xl text-left bg-background/60 backdrop-blur-xl p-4 md:p-8 rounded-2xl md:rounded-3xl border border-white/10 relative z-10 w-full shadow-2xl mt-auto">
+                <h3 className="font-heading font-bold text-[22px] md:text-4xl text-white mb-2 md:mb-4 leading-tight">{step.title}</h3>
+                <p className="font-mono text-[11px] md:text-sm text-textMuted leading-snug md:leading-relaxed mb-4 md:mb-8 border-b border-white/10 pb-4 md:pb-6">{step.desc}</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
                   {step.features.map((feat, idx) => (
                     <div key={idx} className="flex items-center gap-2 md:gap-3 text-[11px] md:text-sm text-textMain bg-white/5 hover:bg-white/10 transition-colors p-2 md:p-3 rounded-lg md:rounded-xl border border-white/5 group">
-                      <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0 group-hover:scale-110 transition-transform" />
-                      <span className="font-medium tracking-wide">{feat}</span>
+                      <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-accent shrink-0 group-hover:scale-110 transition-transform" />
+                      <span className="font-medium tracking-wide leading-tight">{feat}</span>
                     </div>
                   ))}
                 </div>
