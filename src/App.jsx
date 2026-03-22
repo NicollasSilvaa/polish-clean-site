@@ -30,7 +30,7 @@ const Navbar = () => {
         <a href="#processo" className="hover:text-white hover-lift">O Protocolo</a>
         <a href="#residencial" className="hover:text-white hover-lift">Residencial & Sofás</a>
       </div>
-      <a href="#agendamento" className="hidden md:flex items-center gap-2 bg-accent text-background px-5 py-2 rounded-full font-bold text-sm magnetic-btn overflow-hidden relative group">
+      <a href="https://wa.me/5511978017263" target="_blank" rel="noreferrer" className="hidden md:flex items-center gap-2 bg-accent text-background px-5 py-2 rounded-full font-bold text-sm magnetic-btn overflow-hidden relative group">
         <span className="relative z-10 flex items-center gap-2">Agendar <ArrowRight className="w-4 h-4 translate-x-0 group-hover:translate-x-1 transition-transform" /></span>
         <div className="absolute inset-0 bg-white/20 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
       </a>
@@ -111,7 +111,7 @@ const Features = () => {
 
   // Artefato 2: Typewriter State
   const [typedText, setTypedText] = useState("");
-  const fullText = "Aplicando Coating Cerâmico 9H... <br /> Monitorando cura cruzada... <br /> Proteção UV ativa. Hidrofobia máxima alcançada.";
+  const fullText = "Aplicando Coating Cerâmico 9H... Monitorando cura cruzada... Proteção UV ativa. Hidrofobia máxima alcançada.";
 
   useEffect(() => {
     // Logic for Shuffler
@@ -424,7 +424,7 @@ const Pricing = () => {
                 <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-white/30" /> Polimento Comercial</li>
               </ul>
             </div>
-            <button className="w-full py-4 rounded-full border border-white/10 text-white font-bold hover:bg-white inset-0 hover:text-background transition-colors">Agendar</button>
+            <a href="https://wa.me/5511978017263" target="_blank" rel="noreferrer" className="block text-center w-full py-4 rounded-full border border-white/10 text-white font-bold hover:bg-white inset-0 hover:text-background transition-colors cursor-pointer">Agendar</a>
           </div>
 
           <div className="bg-primary rounded-[2rem] p-8 border border-accent/30 scale-100 lg:scale-105 shadow-[0_0_50px_rgba(245,158,11,0.1)] relative z-10">
@@ -438,7 +438,7 @@ const Pricing = () => {
                 <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-accent" /> Vitrificação (Ceramic Coating)</li>
               </ul>
             </div>
-            <button className="w-full py-4 rounded-full bg-accent text-background font-bold magnetic-btn">Agendar Projeto</button>
+            <a href="https://wa.me/5511978017263" target="_blank" rel="noreferrer" className="block text-center w-full py-4 rounded-full bg-accent text-background font-bold magnetic-btn cursor-pointer">Agendar Projeto</a>
           </div>
 
           <div className="bg-surface rounded-[2rem] p-8 border border-white/5">
@@ -451,7 +451,7 @@ const Pricing = () => {
                 <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-white/30" /> Proteção PPF ou Coating Premium</li>
               </ul>
             </div>
-            <button className="w-full py-4 rounded-full border border-white/10 text-white font-bold hover:bg-white inset-0 hover:text-background transition-colors">Consultoria VIP</button>
+            <a href="https://wa.me/5511978017263" target="_blank" rel="noreferrer" className="block text-center w-full py-4 rounded-full border border-white/10 text-white font-bold hover:bg-white inset-0 hover:text-background transition-colors cursor-pointer">Consultoria VIP</a>
           </div>
         </div>
       </div>
